@@ -81,32 +81,46 @@ body {
   z-index: 0;
 }
 
-/* Tech Dot Grid Matrix */
+/* Subtle Top Radial Lighting */
+.bg-radial-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse 90% 60% at 50% -25%, rgba(59, 130, 246, 0.25), transparent 75%);
+}
+
+/* Cyber Geometric Grid Matrix */
 .bg-grid-pattern {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(rgba(59, 130, 246, 0.16) 1.2px, transparent 1.2px);
-  background-size: 32px 32px;
-  opacity: 0.85;
-  mask-image: radial-gradient(ellipse at 50% 50%, black 50%, transparent 95%);
-  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 50%, transparent 95%);
+  background-image: 
+    linear-gradient(to right, rgba(59, 130, 246, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 130, 246, 0.07) 1px, transparent 1px);
+  background-size: 36px 36px;
+  opacity: 0.9;
+  mask-image: radial-gradient(ellipse at 50% 50%, black 45%, transparent 95%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 45%, transparent 95%);
 }
 
 [data-theme="light"] .bg-grid-pattern {
-  background-image: radial-gradient(rgba(37, 99, 235, 0.14) 1.2px, transparent 1.2px);
-  opacity: 0.9;
+  background-image: 
+    linear-gradient(to right, rgba(37, 99, 235, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.08) 1px, transparent 1px);
+  opacity: 0.95;
 }
 
 /* Dynamic Cursor Follow Spotlight */
 .mouse-glow {
   position: absolute;
-  width: 650px;
-  height: 650px;
+  width: 700px;
+  height: 700px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.14) 0%, rgba(6, 182, 212, 0.06) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, rgba(168, 85, 247, 0.12) 32%, rgba(59, 130, 246, 0.05) 55%, transparent 75%);
   transform: translate(-50%, -50%);
   pointer-events: none;
   opacity: 0;
@@ -114,73 +128,95 @@ body {
   will-change: left, top;
 }
 
-/* Fluid Animated Aurora Orbs */
+/* Fluid Animated Aurora Orbs (Vibrant & Rich) */
 .ambient-glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(110px);
-  opacity: 0.32;
+  filter: blur(85px);
+  opacity: 0.52;
+  mix-blend-mode: screen;
   will-change: transform;
 }
 
+[data-theme="light"] .ambient-glow {
+  opacity: 0.25;
+  filter: blur(95px);
+  mix-blend-mode: normal;
+}
+
 .glow-1 {
-  width: 580px;
-  height: 580px;
-  top: -100px;
-  left: -80px;
-  background: radial-gradient(circle, #3b82f6 0%, rgba(59, 130, 246, 0.3) 60%, transparent 100%);
-  animation: floatOrb1 22s infinite alternate ease-in-out;
+  width: 620px;
+  height: 620px;
+  top: -120px;
+  left: -100px;
+  background: radial-gradient(circle, #3b82f6 0%, #1d4ed8 45%, transparent 75%);
+  animation: floatOrb1 20s infinite alternate ease-in-out;
 }
 
 .glow-2 {
-  width: 520px;
-  height: 520px;
-  top: 38%;
-  right: -100px;
-  background: radial-gradient(circle, #06b6d4 0%, rgba(6, 182, 212, 0.3) 60%, transparent 100%);
-  animation: floatOrb2 26s infinite alternate ease-in-out;
+  width: 580px;
+  height: 580px;
+  top: 32%;
+  right: -120px;
+  background: radial-gradient(circle, #06b6d4 0%, #0284c7 50%, transparent 75%);
+  animation: floatOrb2 24s infinite alternate ease-in-out;
 }
 
 .glow-3 {
-  width: 620px;
-  height: 620px;
-  bottom: -120px;
-  left: 20%;
-  background: radial-gradient(circle, #8b5cf6 0%, rgba(139, 92, 246, 0.25) 60%, transparent 100%);
-  animation: floatOrb3 24s infinite alternate ease-in-out;
+  width: 650px;
+  height: 650px;
+  bottom: -150px;
+  left: 25%;
+  background: radial-gradient(circle, #a855f7 0%, #7c3aed 45%, #ec4899 75%, transparent 85%);
+  animation: floatOrb3 22s infinite alternate ease-in-out;
 }
 
 .glow-4 {
-  width: 460px;
-  height: 460px;
-  top: 68%;
-  left: -90px;
-  background: radial-gradient(circle, #10b981 0%, rgba(16, 185, 129, 0.2) 60%, transparent 100%);
-  animation: floatOrb4 28s infinite alternate ease-in-out;
+  width: 500px;
+  height: 500px;
+  top: 65%;
+  left: -120px;
+  background: radial-gradient(circle, #10b981 0%, #059669 50%, transparent 75%);
+  animation: floatOrb4 26s infinite alternate ease-in-out;
+}
+
+.glow-5 {
+  width: 480px;
+  height: 480px;
+  top: 15%;
+  left: 35%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.45) 0%, rgba(236, 72, 153, 0.25) 50%, transparent 75%);
+  animation: floatOrb5 28s infinite alternate ease-in-out;
 }
 
 @keyframes floatOrb1 {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(110px, 90px) scale(1.15); }
-  100% { transform: translate(-50px, 130px) scale(0.95); }
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate(130px, 100px) scale(1.18) rotate(45deg); }
+  100% { transform: translate(-60px, 150px) scale(0.92) rotate(90deg); }
 }
 
 @keyframes floatOrb2 {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-110px, -100px) scale(1.12); }
-  100% { transform: translate(70px, 90px) scale(1.05); }
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate(-130px, -110px) scale(1.15) rotate(-40deg); }
+  100% { transform: translate(80px, 110px) scale(1.06) rotate(-80deg); }
 }
 
 @keyframes floatOrb3 {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(140px, -80px) scale(1.18); }
-  100% { transform: translate(-90px, 50px) scale(0.92); }
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate(160px, -90px) scale(1.22) rotate(50deg); }
+  100% { transform: translate(-100px, 60px) scale(0.9) rotate(100deg); }
 }
 
 @keyframes floatOrb4 {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(80px, 70px) scale(1.1); }
-  100% { transform: translate(-60px, -60px) scale(0.95); }
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate(90px, 80px) scale(1.12) rotate(-35deg); }
+  100% { transform: translate(-70px, -70px) scale(0.94) rotate(-70deg); }
+}
+
+@keyframes floatOrb5 {
+  0% { transform: translate(0, 0) scale(0.95); }
+  50% { transform: translate(-100px, 120px) scale(1.2); }
+  100% { transform: translate(90px, -80px) scale(1.05); }
 }
 
 /* Interactive Particle Canvas (Data Constellation) */
@@ -605,8 +641,16 @@ section {
   overflow: hidden;
   border: 3px solid var(--accent-primary);
   background: var(--bg-secondary);
-  box-shadow: 0 12px 35px var(--accent-glow);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.4), 0 0 50px rgba(6, 182, 212, 0.2);
+  animation: avatarHalo 5s ease-in-out infinite alternate;
   transition: var(--transition);
+}
+
+@keyframes avatarHalo {
+  0% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 45px rgba(6, 182, 212, 0.2); }
+  50% { box-shadow: 0 0 35px rgba(168, 85, 247, 0.5), 0 0 65px rgba(59, 130, 246, 0.35); }
+  100% { box-shadow: 0 0 25px rgba(6, 182, 212, 0.45), 0 0 50px rgba(16, 185, 129, 0.25); }
+}
 }
 
 .profile-avatar-frame:hover {

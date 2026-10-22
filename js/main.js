@@ -59,7 +59,17 @@ function initInteractiveBackground() {
   const ctx = canvas.getContext('2d');
   let width, height;
   let particles = [];
-  const mouse = { x: null, y: null, maxRadius: 140 };
+  let pulses = [];
+  let shockwaves = [];
+  const mouse = { x: null, y: null, maxRadius: 160 };
+
+  const colorPalette = [
+    { r: 56, g: 189, b: 248 },  // Cyan
+    { r: 96, g: 165, b: 250 },  // Blue
+    { r: 168, g: 85, b: 247 },  // Purple
+    { r: 52, g: 211, b: 153 },  // Emerald
+    { r: 251, g: 191, b: 36 }   // Amber
+  ];
 
   function resize() {
     width = canvas.width = window.innerWidth;
@@ -68,20 +78,24 @@ function initInteractiveBackground() {
   }
 
   function getParticleCount() {
-    return window.innerWidth < 768 ? 26 : 58;
+    return window.innerWidth < 768 ? 30 : 65;
   }
 
   function createParticles() {
     particles = [];
+    pulses = [];
     const count = getParticleCount();
     for (let i = 0; i < count; i++) {
+      const color = colorPalette[Math.floor(Math.random() * colorPalette.length)];
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.55,
-        vy: (Math.random() - 0.5) * 0.55,
-        radius: Math.random() * 1.8 + 1,
-        baseAlpha: Math.random() * 0.4 + 0.25
+        vx: (Math.random() - 0.5) * 0.6,
+        vy: (Math.random() - 0.5) * 0.6,
+        radius: Math.random() * 2 + 1.2,
+        baseAlpha: Math.random() * 0.45 + 0.35,
+        color: color,
+        pulseOffset: Math.random() * Math.PI * 2
       });
     }
   }
@@ -107,27 +121,130 @@ function initInteractiveBackground() {
     }
   });
 
+  // Interactive Click Ripple
+  window.addEventListener('click', (e) => {
+    shockwaves.push({
+      x: e.clientX,
+      y: e.clientY,
+      radius: 5,
+      maxRadius: 180,
+      alpha: 0.6
+    });
+
+    // Gently push nearby particles
+    particles.forEach(p => {
+      const dx = p.x - e.clientX;
+      const dy = p.y - e.clientY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 180 && dist > 0) {
+        const force = (180 - dist) / 180 * 4;
+        p.vx += (dx / dist) * force;
+        p.vy += (dy / dist) * force;
+      }
+    });
+  });
+
+  let frame = 0;
+
   function animate() {
     ctx.clearRect(0, 0, width, height);
+    frame++;
 
     const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-    const dotColor = isLight ? 'rgba(37, 99, 235,' : 'rgba(56, 189, 248,';
-    const lineColor = isLight ? 'rgba(37, 99, 235,' : 'rgba(59, 130, 246,';
 
+    // Draw active shockwaves
+    for (let s = shockwaves.length - 1; s >= 0; s--) {
+      const sw = shockwaves[s];
+      sw.radius += 4;
+      sw.alpha *= 0.94;
+
+      ctx.beginPath();
+      ctx.arc(sw.x, sw.y, sw.radius, 0, Math.PI * 2);
+      ctx.strokeStyle = isLight 
+        ? `rgba(37, 99, 235, ${sw.alpha})`
+        : `rgba(56, 189, 248, ${sw.alpha})`;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      if (sw.radius >= sw.maxRadius || sw.alpha <= 0.02) {
+        shockwaves.splice(s, 1);
+      }
+    }
+
+    // Occasionally spawn traveling data pulses along connections
+    if (frame % 45 === 0 && particles.length > 5) {
+      const sourceIdx = Math.floor(Math.random() * particles.length);
+      const p1 = particles[sourceIdx];
+      // Find nearest neighbor
+      for (let j = 0; j < particles.length; j++) {
+        if (sourceIdx !== j) {
+          const p2 = particles[j];
+          const dist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
+          if (dist < 130) {
+            pulses.push({
+              x1: p1.x, y1: p1.y,
+              x2: p2.x, y2: p2.y,
+              progress: 0,
+              speed: 0.025,
+              color: p1.color
+            });
+            break;
+          }
+        }
+      }
+    }
+
+    // Draw and update data pulses
+    for (let pIdx = pulses.length - 1; pIdx >= 0; pIdx--) {
+      const pulse = pulses[pIdx];
+      pulse.progress += pulse.speed;
+
+      const px = pulse.x1 + (pulse.x2 - pulse.x1) * pulse.progress;
+      const py = pulse.y1 + (pulse.y2 - pulse.y1) * pulse.progress;
+
+      ctx.beginPath();
+      ctx.arc(px, py, 2.5, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${pulse.color.r}, ${pulse.color.g}, ${pulse.color.b}, 0.95)`;
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = `rgb(${pulse.color.r}, ${pulse.color.g}, ${pulse.color.b})`;
+      ctx.fill();
+      ctx.shadowBlur = 0; // reset
+
+      if (pulse.progress >= 1) {
+        pulses.splice(pIdx, 1);
+      }
+    }
+
+    // Update & draw particles
     for (let i = 0; i < particles.length; i++) {
       const p = particles[i];
 
       p.x += p.vx;
       p.y += p.vy;
 
+      // Dampen velocity after clicks
+      p.vx *= 0.985;
+      p.vy *= 0.985;
+
+      if (Math.abs(p.vx) < 0.25) p.vx = (Math.random() - 0.5) * 0.6;
+      if (Math.abs(p.vy) < 0.25) p.vy = (Math.random() - 0.5) * 0.6;
+
+      // Bounce against edges
       if (p.x < 0 || p.x > width) p.vx *= -1;
       if (p.y < 0 || p.y > height) p.vy *= -1;
 
-      // Draw particle
+      // Breathing glow calculation
+      const pulseAlpha = p.baseAlpha + Math.sin(frame * 0.04 + p.pulseOffset) * 0.15;
+      const finalAlpha = Math.max(0.15, Math.min(0.9, pulseAlpha));
+
+      // Draw particle with luminous glow
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `${dotColor} ${p.baseAlpha})`;
+      ctx.fillStyle = `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${finalAlpha})`;
+      ctx.shadowBlur = 6;
+      ctx.shadowColor = `rgb(${p.color.r}, ${p.color.g}, ${p.color.b})`;
       ctx.fill();
+      ctx.shadowBlur = 0; // reset shadow
 
       // Connect to mouse pointer
       if (mouse.x !== null && mouse.y !== null) {
@@ -135,30 +252,36 @@ function initInteractiveBackground() {
         const dy = mouse.y - p.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < mouse.maxRadius) {
-          const alpha = (1 - dist / mouse.maxRadius) * 0.35;
+          const alpha = (1 - dist / mouse.maxRadius) * 0.45;
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = `${lineColor} ${alpha})`;
-          ctx.lineWidth = 1;
+          ctx.strokeStyle = isLight
+            ? `rgba(37, 99, 235, ${alpha})`
+            : `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${alpha})`;
+          ctx.lineWidth = 1.2;
           ctx.stroke();
         }
       }
 
-      // Connect with neighbor particles
+      // Connect between neighboring particles with multi-color gradient
       for (let j = i + 1; j < particles.length; j++) {
         const p2 = particles[j];
         const dx = p.x - p2.x;
         const dy = p.y - p2.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < 115) {
-          const alpha = (1 - dist / 115) * 0.18;
+        if (dist < 125) {
+          const alpha = (1 - dist / 125) * 0.22;
+          const grad = ctx.createLinearGradient(p.x, p.y, p2.x, p2.y);
+          grad.addColorStop(0, `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${alpha})`);
+          grad.addColorStop(1, `rgba(${p2.color.r}, ${p2.color.g}, ${p2.color.b}, ${alpha})`);
+
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
-          ctx.strokeStyle = `${lineColor} ${alpha})`;
-          ctx.lineWidth = 0.8;
+          ctx.strokeStyle = grad;
+          ctx.lineWidth = 0.9;
           ctx.stroke();
         }
       }
