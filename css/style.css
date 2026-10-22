@@ -1053,6 +1053,26 @@ section {
   transform: translateY(-2px);
 }
 
+.contact-resume-card {
+  margin-top: 1.75rem;
+  padding: 1.25rem;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  transition: var(--transition);
+}
+
+.contact-resume-card:hover {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
 /* Contact Form */
 .form-group {
   margin-bottom: 1.25rem;
