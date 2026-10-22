@@ -1,0 +1,42 @@
+<svg width="600" height="340" viewBox="0 0 600 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="600" height="340" fill="url(#pGrad)"/>
+  
+  <!-- Subtle Grid -->
+  <line x1="60" y1="260" x2="540" y2="260" stroke="#334155" stroke-width="1"/>
+  <line x1="60" y1="200" x2="540" y2="200" stroke="#334155" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="60" y1="140" x2="540" y2="140" stroke="#334155" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="60" y1="80" x2="540" y2="80" stroke="#334155" stroke-width="1" stroke-dasharray="4 4"/>
+  
+  <!-- Sample Dashboard Bars -->
+  <rect x="90" y="160" width="45" height="100" rx="4" fill="url(#barGrad)"/>
+  <rect x="160" y="110" width="45" height="150" rx="4" fill="url(#barGrad)"/>
+  <rect x="230" y="90" width="45" height="170" rx="4" fill="#3b82f6"/>
+  <rect x="300" y="130" width="45" height="130" rx="4" fill="url(#barGrad)"/>
+  <rect x="370" y="170" width="45" height="90" rx="4" fill="url(#barGrad)"/>
+  <rect x="440" y="120" width="45" height="140" rx="4" fill="#10b981"/>
+
+  <!-- Trend Line -->
+  <polyline points="112,150 182,100 252,80 322,120 392,160 462,110" fill="none" stroke="url(#accentLine)" stroke-width="3"/>
+  <circle cx="252" cy="80" r="5" fill="#38bdf8"/>
+
+  <!-- Overlay Badge -->
+  <rect x="180" y="280" width="240" height="34" rx="17" fill="rgba(15, 23, 42, 0.9)" stroke="#475569" stroke-width="1"/>
+  <text x="300" y="302" text-anchor="middle" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="12" font-weight="600">
+    PROJECT IMAGE PLACEHOLDER
+  </text>
+</svg>

@@ -69,6 +69,13 @@
     <section class="hero" id="hero">
       <div class="container hero-grid">
         <div class="hero-content">
+          <div class="hero-avatar-badge">
+            <img src="assets/profile.jpg" onerror="this.onerror=null; this.src='assets/profile-placeholder.svg';" alt="Ayush Rastogi" class="hero-mini-avatar">
+            <div>
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); display: block;">Ayush Rastogi</span>
+              <span style="font-size: 0.75rem; color: var(--accent-secondary); font-family: var(--font-mono);">Data Analyst &amp; BI Specialist</span>
+            </div>
+          </div>
           <div class="status-badge">
             <span class="status-dot"></span>
             <span>Actively Seeking Data Analytics Opportunities</span>
@@ -153,58 +160,82 @@
         </div>
 
         <div class="about-grid">
-          <div class="about-text">
-            <p>
-              I am an aspiring Data Analyst currently pursuing my <strong>B.Tech in Information Technology</strong> at JSS Academy of Technical Education, Noida. My journey revolves around uncovering the stories hidden within complex datasets and architecting intuitive visualizations that empower teams to make confident, data-backed choices.
-            </p>
-            <p>
-              During my internship at <strong>VirtuBox Infotech Pvt. Ltd.</strong>, I gained hands-on experience in the complete analytical lifecycle—from dataset gathering and comprehensive cleaning in Python & SQL to formulating automated visual KPI reports.
-            </p>
-            <p>
-              Certified by Google in <strong>Data Analytics</strong>, I continually sharpen my acumen across exploratory data analysis (EDA), relational databases, statistical modeling, and interactive dashboard engineering in Power BI and Tableau.
-            </p>
-
-            <div style="margin-top: 1.5rem;">
-              <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--text-primary);">Academic Coursework:</h4>
-              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <span class="tech-pill">Data Structures & Algorithms</span>
-                <span class="tech-pill">Database Management Systems (DBMS)</span>
-                <span class="tech-pill">Object-Oriented Programming (OOP)</span>
-                <span class="tech-pill">Computer Networks</span>
-              </div>
+          <!-- Profile Card with Photo Placeholder -->
+          <div class="profile-card-wrapper">
+            <div class="profile-avatar-frame">
+              <img src="assets/profile.jpg" onerror="this.onerror=null; this.src='assets/profile-placeholder.svg';" alt="Ayush Rastogi Profile Picture" class="profile-avatar-img">
+              <div class="photo-badge"><i class="fa-solid fa-camera"></i> Photo Slot</div>
+            </div>
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--text-primary);">Ayush Rastogi</h3>
+            <p style="color: var(--accent-secondary); font-size: 0.9rem; font-weight: 600; margin-bottom: 0.75rem;">Data Analyst &amp; BI Specialist</p>
+            <div class="avatar-hint">
+              <i class="fa-solid fa-circle-info"></i> Image: <code>assets/profile.jpg</code>
+            </div>
+            <div style="margin-top: 1.25rem; width: 100%; display: flex; flex-direction: column; gap: 0.6rem;">
+              <a href="assets/Ayush_Rastogi_Resume.pdf" target="_blank" class="btn btn-primary btn-sm" style="width: 100%;" download>
+                <i class="fa-solid fa-file-pdf"></i> Download Resume
+              </a>
+              <a href="#contact" class="btn btn-secondary btn-sm" style="width: 100%;">
+                <i class="fa-solid fa-envelope"></i> Contact Directly
+              </a>
             </div>
           </div>
 
-          <div class="info-card-list">
-            <div class="info-item">
-              <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-              <div class="info-content">
-                <h4>Education</h4>
-                <p>B.Tech in Information Technology (2023 - 2027) — JSS Academy of Technical Education, Noida</p>
+          <!-- About Details & Info List -->
+          <div>
+            <div class="about-text">
+              <p>
+                I am an aspiring Data Analyst currently pursuing my <strong>B.Tech in Information Technology</strong> at JSS Academy of Technical Education, Noida. My journey revolves around uncovering the stories hidden within complex datasets and architecting intuitive visualizations that empower teams to make confident, data-backed choices.
+              </p>
+              <p>
+                During my internship at <strong>VirtuBox Infotech Pvt. Ltd.</strong>, I gained hands-on experience in the complete analytical lifecycle—from dataset gathering and comprehensive cleaning in Python &amp; SQL to formulating automated visual KPI reports.
+              </p>
+              <p>
+                Certified by Google in <strong>Data Analytics</strong>, I continually sharpen my acumen across exploratory data analysis (EDA), relational databases, statistical modeling, and interactive dashboard engineering in Power BI and Tableau.
+              </p>
+
+              <div style="margin-top: 1.5rem;">
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--text-primary);">Academic Coursework:</h4>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                  <span class="tech-pill">Data Structures &amp; Algorithms</span>
+                  <span class="tech-pill">Database Management Systems (DBMS)</span>
+                  <span class="tech-pill">Object-Oriented Programming (OOP)</span>
+                  <span class="tech-pill">Computer Networks</span>
+                </div>
               </div>
             </div>
 
-            <div class="info-item">
-              <div class="info-icon"><i class="fa-solid fa-briefcase"></i></div>
-              <div class="info-content">
-                <h4>Practical Experience</h4>
-                <p>Data Analyst Intern at VirtuBox Infotech Pvt. Ltd. (Jun 2026 – Aug 2026)</p>
+            <div class="info-card-list">
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="info-content">
+                  <h4>Education</h4>
+                  <p>B.Tech in Information Technology (2023 - 2027) — JSS Academy of Technical Education, Noida</p>
+                </div>
               </div>
-            </div>
 
-            <div class="info-item">
-              <div class="info-icon"><i class="fa-solid fa-certificate"></i></div>
-              <div class="info-content">
-                <h4>Professional Credential</h4>
-                <p>Google Data Analytics Professional Certificate (8-Course Specialization)</p>
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <div class="info-content">
+                  <h4>Practical Experience</h4>
+                  <p>Data Analyst Intern at VirtuBox Infotech Pvt. Ltd. (Jun 2026 – Aug 2026)</p>
+                </div>
               </div>
-            </div>
 
-            <div class="info-item">
-              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div class="info-content">
-                <h4>Location</h4>
-                <p>Noida, Uttar Pradesh, India</p>
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-certificate"></i></div>
+                <div class="info-content">
+                  <h4>Professional Credential</h4>
+                  <p>Google Data Analytics Professional Certificate (8-Course Specialization)</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="info-content">
+                  <h4>Location</h4>
+                  <p>Noida, Uttar Pradesh, India</p>
+                </div>
               </div>
             </div>
           </div>
@@ -354,11 +385,8 @@
           <!-- Project 1 -->
           <div class="project-card">
             <div class="project-preview">
+              <img src="assets/projects/pizza-sales.jpg" onerror="this.onerror=null; this.src='assets/projects/pizza-sales-placeholder.svg';" alt="Pizza Sales Dashboard Preview" class="project-img">
               <span class="preview-badge"><i class="fa-solid fa-check"></i> Completed</span>
-              <div style="text-align: center; color: var(--text-primary);">
-                <i class="fa-solid fa-pizza-slice" style="font-size: 3.5rem; color: #f59e0b; margin-bottom: 0.5rem;"></i>
-                <div style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-mono);">SQL + POWER BI</div>
-              </div>
             </div>
             <div class="project-content">
               <h3 class="project-title">Pizza Sales Performance Analysis</h3>
@@ -390,11 +418,8 @@
           <!-- Project 2 -->
           <div class="project-card">
             <div class="project-preview">
+              <img src="assets/projects/car-sales.jpg" onerror="this.onerror=null; this.src='assets/projects/car-sales-placeholder.svg';" alt="Car Sales Dashboard Preview" class="project-img">
               <span class="preview-badge" style="background: rgba(59, 130, 246, 0.7);"><i class="fa-solid fa-spinner fa-spin"></i> Active / Ongoing</span>
-              <div style="text-align: center; color: var(--text-primary);">
-                <i class="fa-solid fa-car" style="font-size: 3.5rem; color: #3b82f6; margin-bottom: 0.5rem;"></i>
-                <div style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-mono);">PYTHON + SQL + BI</div>
-              </div>
             </div>
             <div class="project-content">
               <h3 class="project-title">Automotive Sales & Market Trend Analysis</h3>

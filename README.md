@@ -29,7 +29,7 @@ Explore the live portfolio at:
 
 ---
 
-## 📂 Repository Structure
+## 📂 Repository Structure & Image Customization
 
 ```text
 portfolio/
@@ -39,9 +39,22 @@ portfolio/
 ├── js/
 │   └── main.js                  # Typing animations, Chart.js lab, theme logic
 ├── assets/
-│   └── Ayush_Rastogi_Resume.pdf # Authentic PDF Resume for 1-click download
+│   ├── Ayush_Rastogi_Resume.pdf # Authentic PDF Resume for 1-click download
+│   ├── profile.jpg              # [Photo Slot] Add your profile photo here
+│   ├── profile-placeholder.svg  # Default modern avatar placeholder
+│   └── projects/
+│       ├── pizza-sales.jpg      # [Project 1] Add Pizza Sales screenshot
+│       ├── pizza-sales-placeholder.svg
+│       ├── car-sales.jpg        # [Project 2] Add Car Sales screenshot
+│       └── car-sales-placeholder.svg
 └── README.md                    # Project documentation & setup instructions
 ```
+
+### 🖼️ Adding Your Real Photos:
+All image elements are built with seamless fallbacks:
+- **Profile Picture:** Save your photo as `assets/profile.jpg`. The website will automatically display it.
+- **Project Previews:** Drop your dashboard screenshots as `assets/projects/pizza-sales.jpg` and `assets/projects/car-sales.jpg`.
+- Until you add your images, high-resolution SVG placeholders are displayed automatically.
 
 ---
 
