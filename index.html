@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayush Rastogi | Data Analyst & BI Specialist</title>
+  <meta name="description" content="Portfolio of Ayush Rastogi - Data Analyst skilled in SQL, Power BI, Python, and Excel. Transforming raw data into business intelligence and actionable insights.">
+  <meta name="keywords" content="Ayush Rastogi, Data Analyst, Power BI, SQL, Python, Portfolio, Data Analytics, JSS Noida">
+  <meta name="author" content="Ayush Rastogi">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ayush Rastogi | Data Analyst Portfolio">
+  <meta property="og:description" content="Data Analyst with expertise in SQL, Power BI, Excel, and Python. Explore my analytics projects, dashboards, and credentials.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Chart.js for Interactive Playground -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Ambient Background Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-badge">&lt;AR /&gt;</span>
+        <span>Ayush Rastogi</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#playground" class="nav-link">Data Lab</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <a href="assets/Ayush_Rastogi_Resume.pdf" target="_blank" class="btn btn-primary btn-sm" download>
+          <i class="fa-solid fa-file-arrow-down"></i> Resume
+        </a>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Actively Seeking Data Analytics Opportunities</span>
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Ayush Rastogi</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            <span>Passionate</span>
+            <span class="typed-text" id="typed-text"></span>
+          </h2>
+          <p class="hero-bio">
+            B.Tech Information Technology student at JSS Academy of Technical Education, Noida. Specializing in transforming complex datasets into meaningful visual stories, predictive insights, and high-impact Power BI dashboards that guide critical business decisions.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-chart-line"></i> Explore Projects
+            </a>
+            <a href="assets/Ayush_Rastogi_Resume.pdf" target="_blank" class="btn btn-secondary" download>
+              <i class="fa-solid fa-download"></i> Download CV
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-solid fa-paper-plane"></i> Get in Touch
+            </a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <div class="metric-number">Google</div>
+              <div class="metric-label">Certified Data Analyst</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">2027</div>
+              <div class="metric-label">B.Tech IT (JSS Noida)</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">SQL & BI</div>
+              <div class="metric-label">Core Tech Focus</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-card">
+            <div class="card-header-bar">
+              <div class="dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted);">analytics_pipeline.sql</span>
+            </div>
+            <pre style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; overflow-x: auto;">
+<code><span style="color: #3b82f6;">SELECT</span> 
+    pizza_category,
+    <span style="color: #10b981;">SUM</span>(total_price) <span style="color: #3b82f6;">AS</span> total_revenue,
+    <span style="color: #10b981;">COUNT</span>(<span style="color: #3b82f6;">DISTINCT</span> order_id) <span style="color: #3b82f6;">AS</span> orders,
+    <span style="color: #10b981;">ROUND</span>(<span style="color: #10b981;">AVG</span>(unit_price), 2) <span style="color: #3b82f6;">AS</span> avg_price
+<span style="color: #3b82f6;">FROM</span> sales_records
+<span style="color: #3b82f6;">WHERE</span> order_status = <span style="color: #f59e0b;">'Completed'</span>
+<span style="color: #3b82f6;">GROUP BY</span> pizza_category
+<span style="color: #3b82f6;">ORDER BY</span> total_revenue <span style="color: #3b82f6;">DESC</span>;</code>
+            </pre>
+            <div class="tech-stack-strip">
+              <span class="tech-pill"><i class="fa-solid fa-database"></i> SQL (MySQL)</span>
+              <span class="tech-pill"><i class="fa-solid fa-chart-pie"></i> Power BI</span>
+              <span class="tech-pill"><i class="fa-brands fa-python"></i> Python / Pandas</span>
+              <span class="tech-pill"><i class="fa-solid fa-table"></i> Advanced Excel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Background</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-desc">Bridging the gap between raw numbers and strategic enterprise value.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am an aspiring Data Analyst currently pursuing my <strong>B.Tech in Information Technology</strong> at JSS Academy of Technical Education, Noida. My journey revolves around uncovering the stories hidden within complex datasets and architecting intuitive visualizations that empower teams to make confident, data-backed choices.
+            </p>
+            <p>
+              During my internship at <strong>VirtuBox Infotech Pvt. Ltd.</strong>, I gained hands-on experience in the complete analytical lifecycle—from dataset gathering and comprehensive cleaning in Python & SQL to formulating automated visual KPI reports.
+            </p>
+            <p>
+              Certified by Google in <strong>Data Analytics</strong>, I continually sharpen my acumen across exploratory data analysis (EDA), relational databases, statistical modeling, and interactive dashboard engineering in Power BI and Tableau.
+            </p>
+
+            <div style="margin-top: 1.5rem;">
+              <h4 style="font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--text-primary);">Academic Coursework:</h4>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <span class="tech-pill">Data Structures & Algorithms</span>
+                <span class="tech-pill">Database Management Systems (DBMS)</span>
+                <span class="tech-pill">Object-Oriented Programming (OOP)</span>
+                <span class="tech-pill">Computer Networks</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card-list">
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="info-content">
+                <h4>Education</h4>
+                <p>B.Tech in Information Technology (2023 - 2027) — JSS Academy of Technical Education, Noida</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <div class="info-content">
+                <h4>Practical Experience</h4>
+                <p>Data Analyst Intern at VirtuBox Infotech Pvt. Ltd. (Jun 2026 – Aug 2026)</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-certificate"></i></div>
+              <div class="info-content">
+                <h4>Professional Credential</h4>
+                <p>Google Data Analytics Professional Certificate (8-Course Specialization)</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="info-content">
+                <h4>Location</h4>
+                <p>Noida, Uttar Pradesh, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Core Capabilities</span>
+          <h2 class="section-title">Technical Expertise</h2>
+          <p class="section-desc">Tools, languages, and methodologies I leverage to analyze, model, and visualize data.</p>
+        </div>
+
+        <div class="skills-tabs">
+          <button class="tab-btn active" data-filter="all">All Skills</button>
+          <button class="tab-btn" data-filter="analysis">Data Analysis</button>
+          <button class="tab-btn" data-filter="bi">BI & Visualization</button>
+          <button class="tab-btn" data-filter="python">Python & Libraries</button>
+          <button class="tab-btn" data-filter="databases">Databases & Tools</button>
+        </div>
+
+        <div class="skills-grid">
+          <!-- SQL -->
+          <div class="skill-card" data-category="analysis">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-database"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">SQL</div>
+              <div class="skill-level">Complex queries, joins, window functions, CTEs</div>
+            </div>
+          </div>
+
+          <!-- Power BI -->
+          <div class="skill-card" data-category="bi">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-chart-column"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">Power BI</div>
+              <div class="skill-level">DAX, data modeling, KPI dashboards, drill-downs</div>
+            </div>
+          </div>
+
+          <!-- Excel -->
+          <div class="skill-card" data-category="analysis">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-file-excel"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">Microsoft Excel</div>
+              <div class="skill-level">Pivot tables, VLOOKUP/XLOOKUP, formulas, data cleaning</div>
+            </div>
+          </div>
+
+          <!-- Python -->
+          <div class="skill-card" data-category="python">
+            <div class="skill-icon-wrapper"><i class="fa-brands fa-python"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">Python</div>
+              <div class="skill-level">Data wrangling, script automation, algorithmic logic</div>
+            </div>
+          </div>
+
+          <!-- Pandas & NumPy -->
+          <div class="skill-card" data-category="python">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-cubes"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">Pandas & NumPy</div>
+              <div class="skill-level">Dataframe transformations, aggregation, vectorization</div>
+            </div>
+          </div>
+
+          <!-- Matplotlib & Seaborn -->
+          <div class="skill-card" data-category="python">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-chart-area"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">Matplotlib & Seaborn</div>
+              <div class="skill-level">Exploratory statistical visualization & correlation plots</div>
+            </div>
+          </div>
+
+          <!-- Tableau -->
+          <div class="skill-card" data-category="bi">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-chart-pie"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">Tableau</div>
+              <div class="skill-level">Interactive visual workbooks & storyboards</div>
+            </div>
+          </div>
+
+          <!-- MySQL -->
+          <div class="skill-card" data-category="databases">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-server"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">MySQL</div>
+              <div class="skill-level">Relational database design, queries & normalization</div>
+            </div>
+          </div>
+
+          <!-- MongoDB -->
+          <div class="skill-card" data-category="databases">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-leaf"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">MongoDB</div>
+              <div class="skill-level">NoSQL document stores & schema structuring</div>
+            </div>
+          </div>
+
+          <!-- Git & GitHub -->
+          <div class="skill-card" data-category="databases">
+            <div class="skill-icon-wrapper"><i class="fa-brands fa-github"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">Git & GitHub</div>
+              <div class="skill-level">Version control, collaborative workflows & CI/CD</div>
+            </div>
+          </div>
+
+          <!-- Jupyter Notebooks -->
+          <div class="skill-card" data-category="databases">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-book-open"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">Jupyter Notebooks</div>
+              <div class="skill-level">Reproducible research & narrative data storytelling</div>
+            </div>
+          </div>
+
+          <!-- Data Cleaning & EDA -->
+          <div class="skill-card" data-category="analysis">
+            <div class="skill-icon-wrapper"><i class="fa-solid fa-broom"></i></div>
+            <div class="skill-info">
+              <div class="skill-name">Data Cleaning & EDA</div>
+              <div class="skill-level">Outlier detection, imputation & feature extraction</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Portfolio Showcase</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-desc">Case studies demonstrating end-to-end data analysis from raw ingestion to business insights.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-preview">
+              <span class="preview-badge"><i class="fa-solid fa-check"></i> Completed</span>
+              <div style="text-align: center; color: var(--text-primary);">
+                <i class="fa-solid fa-pizza-slice" style="font-size: 3.5rem; color: #f59e0b; margin-bottom: 0.5rem;"></i>
+                <div style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-mono);">SQL + POWER BI</div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Pizza Sales Performance Analysis</h3>
+              <p class="project-desc">
+                Conducted an in-depth analytical evaluation of sales data to decipher revenue drivers, order distribution across weekdays and hourly peaks, and top-performing product categories.
+              </p>
+              <ul class="project-highlights">
+                <li><i class="fa-solid fa-arrow-right"></i> Used SQL queries to calculate KPIs: Total Revenue, Average Order Value (AOV), and Total Pizzas Sold.</li>
+                <li><i class="fa-solid fa-arrow-right"></i> Engineered an interactive multi-tab Power BI dashboard highlighting best and worst selling items.</li>
+                <li><i class="fa-solid fa-arrow-right"></i> Identified peak transaction windows to optimize kitchen staffing and inventory replenishment.</li>
+              </ul>
+              <div class="project-tags">
+                <span class="project-tag">SQL</span>
+                <span class="project-tag">Power BI</span>
+                <span class="project-tag">Data Modeling</span>
+                <span class="project-tag">KPI Reporting</span>
+              </div>
+              <div class="project-links">
+                <a href="#playground" class="btn btn-primary btn-sm">
+                  <i class="fa-solid fa-chart-simple"></i> View Interactive Data
+                </a>
+                <a href="https://github.com/ayushrastogi2003-collab" target="_blank" class="btn btn-secondary btn-sm">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-preview">
+              <span class="preview-badge" style="background: rgba(59, 130, 246, 0.7);"><i class="fa-solid fa-spinner fa-spin"></i> Active / Ongoing</span>
+              <div style="text-align: center; color: var(--text-primary);">
+                <i class="fa-solid fa-car" style="font-size: 3.5rem; color: #3b82f6; margin-bottom: 0.5rem;"></i>
+                <div style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-mono);">PYTHON + SQL + BI</div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Automotive Sales & Market Trend Analysis</h3>
+              <p class="project-desc">
+                Analyzing automotive sales data to diagnose regional volume differences, pricing sensitivity, and seasonal vehicle trends using Python for EDA and SQL for structured querying.
+              </p>
+              <ul class="project-highlights">
+                <li><i class="fa-solid fa-arrow-right"></i> Engineered automated data cleaning pipelines in Python utilizing Pandas and NumPy.</li>
+                <li><i class="fa-solid fa-arrow-right"></i> Visualized price-to-volume correlation coefficients using Seaborn heatmap matrices.</li>
+                <li><i class="fa-solid fa-arrow-right"></i> Developing a Power BI executive overview with slicers by vehicle category and transmission type.</li>
+              </ul>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Pandas</span>
+                <span class="project-tag">SQL</span>
+                <span class="project-tag">Seaborn</span>
+                <span class="project-tag">Power BI</span>
+              </div>
+              <div class="project-links">
+                <a href="#playground" class="btn btn-primary btn-sm">
+                  <i class="fa-solid fa-chart-line"></i> View Trends
+                </a>
+                <a href="https://github.com/ayushrastogi2003-collab" target="_blank" class="btn btn-secondary btn-sm">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Data Lab / Playground -->
+    <section class="playground-section" id="playground">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Live Analytics Playground</span>
+          <h2 class="section-title">Interactive Data Lab</h2>
+          <p class="section-desc">Test-drive interactive visual summaries generated from my analytical datasets directly in your browser.</p>
+        </div>
+
+        <div class="playground-card">
+          <div class="playground-controls">
+            <div>
+              <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Select Project Dataset:</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary);">Toggle below to update live chart metrics and categories.</p>
+            </div>
+            <div class="dataset-select-btns">
+              <button class="btn btn-primary btn-sm data-switch-btn" data-dataset="pizza">
+                <i class="fa-solid fa-pizza-slice"></i> Pizza Sales
+              </button>
+              <button class="btn btn-secondary btn-sm data-switch-btn" data-dataset="cars">
+                <i class="fa-solid fa-car"></i> Car Sales Trends
+              </button>
+            </div>
+          </div>
+
+          <div class="chart-wrapper">
+            <canvas id="analyticsChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Timeline Section -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Career Pathway</span>
+          <h2 class="section-title">Experience & Education</h2>
+          <p class="section-desc">My professional trajectory, internships, credentials, and academic milestones.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Experience -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <h3 class="timeline-title">Data Analyst Intern</h3>
+                <span class="timeline-date">Jun 2026 – Aug 2026</span>
+              </div>
+              <div class="timeline-company">VirtuBox Infotech Pvt. Ltd.</div>
+              <ul class="timeline-points">
+                <li>Executed end-to-end data collection, normalization, cleaning, and reporting processes.</li>
+                <li>Analyzed multi-source transactional datasets to isolate operational bottlenecks and consumer behavior trends.</li>
+                <li>Utilized analytical query techniques to heighten data hygiene and enhance enterprise reporting integrity.</li>
+                <li>Constructed intuitive visualizations and recurring dashboards to present quantitative findings to key stakeholders.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Certification -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <h3 class="timeline-title">Google Data Analytics Professional Certificate</h3>
+                <span class="timeline-date">Completed Nov 2025</span>
+              </div>
+              <div class="timeline-company">Google / Coursera</div>
+              <ul class="timeline-points">
+                <li>Completed an intensive 8-course credential spanning data cleaning, exploratory analysis, spreadsheets, SQL, Tableau, and R programming.</li>
+                <li>Mastered the data analysis lifecycle: Ask, Prepare, Process, Analyze, Share, and Act.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- B.Tech -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <h3 class="timeline-title">B.Tech in Information Technology</h3>
+                <span class="timeline-date">2023 – 2027</span>
+              </div>
+              <div class="timeline-company">JSS Academy of Technical Education, Noida</div>
+              <ul class="timeline-points">
+                <li>Core disciplines: Database Management Systems, Data Structures & Algorithms, Object-Oriented Programming, and Networks.</li>
+                <li>Active involvement in technical events, analytical problem solving, and data projects.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Schooling -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <h3 class="timeline-title">Senior Secondary & High School (Class 12 & 10)</h3>
+                <span class="timeline-date">2021 – 2023</span>
+              </div>
+              <div class="timeline-company">Little Flower House, Kakarmatta</div>
+              <ul class="timeline-points">
+                <li>Class 12: 72.2% | Class 10: 74.4%</li>
+                <li>Solid foundational background in Mathematics and Sciences.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Get in Touch</span>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="section-desc">Interested in discussing a data analyst role, collaboration, or have a question? Send me a message!</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;">Contact Information</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">Feel free to reach out directly via email, phone, or GitHub.</p>
+
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-details">
+                  <span>Email</span>
+                  <div style="display: flex; align-items: center;">
+                    <a href="mailto:ayushrastogi2003@gmail.com">ayushrastogi2003@gmail.com</a>
+                    <button class="copy-btn" data-copy="ayushrastogi2003@gmail.com" title="Copy Email">
+                      <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="contact-details">
+                  <span>Phone</span>
+                  <div style="display: flex; align-items: center;">
+                    <a href="tel:+918840590270">+91 8840590270</a>
+                    <button class="copy-btn" data-copy="+918840590270" title="Copy Phone Number">
+                      <i class="fa-regular fa-copy"></i> Copy
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="contact-details">
+                  <span>Location</span>
+                  <p>Noida, Uttar Pradesh, India</p>
+                </div>
+              </div>
+            </div>
+
+            <h4 style="font-size: 0.95rem; color: var(--text-primary); margin-top: 1.5rem;">Social Profiles</h4>
+            <div class="social-links">
+              <a href="https://github.com/ayushrastogi2003-collab" target="_blank" class="social-btn" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:ayushrastogi2003@gmail.com" class="social-btn" aria-label="Send Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 1.25rem;">Send a Direct Message</h3>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Jane Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Your Email</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="e.g. jane@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Tell me about your team or project..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div>
+        &copy; 2026 <strong>Ayush Rastogi</strong>. All rights reserved.
+      </div>
+      <div>
+        Designed & Built for Data-Driven Analytics
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
