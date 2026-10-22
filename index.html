@@ -28,10 +28,16 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Ambient Background Glows -->
-  <div class="ambient-glow glow-1"></div>
-  <div class="ambient-glow glow-2"></div>
-  <div class="ambient-glow glow-3"></div>
+  <!-- Interactive Dynamic Background System -->
+  <div class="bg-wrapper">
+    <div class="bg-grid-pattern"></div>
+    <div class="mouse-glow" id="mouse-glow"></div>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+    <div class="ambient-glow glow-4"></div>
+    <canvas id="particle-canvas" class="particle-canvas"></canvas>
+  </div>
 
   <!-- Header / Navigation -->
   <header>
@@ -240,7 +246,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" style="background: var(--bg-secondary);">
+    <section id="skills" class="section-alt">
       <div class="container">
         <div class="section-header">
           <span class="section-subtitle">Core Capabilities</span>
@@ -588,7 +594,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" style="background: var(--bg-secondary);">
+    <section id="contact" class="section-alt">
       <div class="container">
         <div class="section-header">
           <span class="section-subtitle">Get in Touch</span>
