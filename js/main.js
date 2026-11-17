@@ -1,4 +1,4 @@
-// Main JavaScript for Ayush Rastogi's Data Analyst Portfolio
+// Main JavaScript for Ayush Rastogi's Software Engineer Portfolio
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -301,10 +301,10 @@ function initTypingEffect() {
   if (!typedSpan) return;
 
   const words = [
-    'Data Analyst',
-    'SQL & Power BI Specialist',
-    'Python & EDA Explorer',
-    'Business Insights Builder'
+    'Software Engineer',
+    'C++ & Python Developer',
+    'Full-Stack & Backend Builder',
+    'DSA & Systems Enthusiast'
   ];
   let wordIndex = 0;
   let charIndex = 0;
@@ -405,8 +405,8 @@ function initSkillsFilter() {
       const filter = btn.getAttribute('data-filter');
 
       skillCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
+        const categories = (card.getAttribute('data-category') || '').split(' ');
+        if (filter === 'all' || categories.includes(filter)) {
           card.style.display = 'flex';
           card.style.animation = 'fadeIn 0.4s ease forwards';
         } else {

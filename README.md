@@ -1,11 +1,11 @@
-# Ayush Rastogi — Data Analyst Portfolio
+# Ayush Rastogi — Software Engineer Portfolio
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-brightgreen?logo=github)](https://ayushrastogi2003-collab.github.io/portfolio/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin)](https://linkedin.com)
 [![Portfolio Views](https://komarev.com/ghpvc/?username=ayushrastogi2003-collab&label=Profile%20Views&color=0e75b6&style=flat)](https://github.com/ayushrastogi2003-collab)
 
-> A modern, responsive, high-performance personal portfolio tailored for **Data Analytics**, featuring interactive case studies (SQL, Power BI, Python), a live Chart.js Data Lab, downloadable resume, and dark/light themes.
+> A modern, responsive, high-performance personal portfolio tailored for **Software Engineering**, featuring clean software architectures, C++, Python, Data Structures & Algorithms, full-stack systems, an interactive engineering playground, downloadable resume, and dark/light themes.
 
 ---
 
@@ -16,16 +16,14 @@ Explore the live portfolio at:
 
 ---
 
-## 🛠️ Tech Stack & Highlights
+## 🛠️ Tech Stack & Engineering Highlights
 
-- **Frontend & Styling:** Modern semantic HTML5, Vanilla CSS3 (Custom properties, CSS Grid/Flexbox, Glassmorphism accents), FontAwesome 6.
-- **Interactivity:** Vanilla JavaScript (ES6+), Dynamic Typing effect, Theme Switcher (Dark/Light mode with local persistence), ScrollSpy, Filterable Skills Matrix.
-- **Data Visualization Lab:** Live interactive charts rendered in-browser using **Chart.js** for case-study exploration.
-- **Analytics Expertise Highlighted:**
-  - **SQL (MySQL):** Complex joins, window functions, CTEs, aggregation pipelines.
-  - **Power BI & DAX:** Interactive dashboards, data modeling, KPI tracking.
-  - **Python Data Stack:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn.
-  - **Excel:** Advanced functions, pivot tables, data cleaning.
+- **Languages:** C, C++ (OOP, STL, pointers), Python, SQL (MySQL), JavaScript (ES6+).
+- **Core Computer Science:** Data Structures & Algorithms, Object-Oriented Design (OOP), Database Management Systems (DBMS), Computer Networks.
+- **Backend & Databases:** MySQL (relational schema design, normalization, query optimization), MongoDB (NoSQL), automated Python ETL pipelines.
+- **Frontend & UI:** Semantic HTML5, modern vanilla CSS3 (CSS Grid, Flexbox, Glassmorphism, dynamic glow effects), responsive web design.
+- **Developer Tools & DevOps:** Git, GitHub (version control, branch workflows, CI/CD), Linux/Unix CLI (Zsh/Bash), VS Code, Jupyter Notebooks.
+- **Interactive Lab:** Real-time interactive telemetry and data exploration rendered directly with **Chart.js**.
 
 ---
 
@@ -58,16 +56,16 @@ All image elements are built with seamless fallbacks:
 
 ---
 
-## 📊 Featured Case Studies
+## 📊 Featured Projects & Systems
 
-1. **Pizza Sales Performance Analysis (SQL & Power BI)**
-   - Extracted and transformed order records using SQL queries.
+1. **Pizza Sales Analytics & Intelligence Engine (SQL & Power BI)**
+   - Extracted and transformed order records using optimized SQL queries and relational modeling.
    - Identified revenue trends, best/worst sellers, and order volume patterns.
    - Designed an interactive multi-tab Power BI dashboard for executive reporting.
 
-2. **Automotive Sales & Market Trend Analysis (Python, SQL & Power BI)**
-   - Pre-processed and normalized raw vehicle transaction datasets using Pandas.
-   - Evaluated feature correlations with Seaborn heatmaps.
+2. **Automotive Sales & Market Trend Analysis Engine (Python, SQL & Power BI)**
+   - Engineered automated data cleaning and normalization pipelines using Python and Pandas.
+   - Evaluated feature correlations with statistical algorithms and Seaborn heatmaps.
    - Built KPI dashboards showing regional sales and vehicle category metrics.
 
 ---
