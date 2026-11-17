@@ -1,0 +1,81 @@
+<svg width="600" height="340" viewBox="0 0 600 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgFlutter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="flutterBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#02569B"/>
+      <stop offset="100%" stop-color="#0175C2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="340" fill="#0b1120"/>
+
+  <!-- Subtle Grid -->
+  <g opacity="0.15">
+    <line x1="0" y1="60" x2="600" y2="60" stroke="#38bdf8" stroke-width="1"/>
+    <line x1="0" y1="120" x2="600" y2="120" stroke="#38bdf8" stroke-width="1"/>
+    <line x1="0" y1="180" x2="600" y2="180" stroke="#38bdf8" stroke-width="1"/>
+    <line x1="0" y1="240" x2="600" y2="240" stroke="#38bdf8" stroke-width="1"/>
+    <line x1="150" y1="0" x2="150" y2="340" stroke="#38bdf8" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="340" stroke="#38bdf8" stroke-width="1"/>
+    <line x1="450" y1="0" x2="450" y2="340" stroke="#38bdf8" stroke-width="1"/>
+  </g>
+
+  <!-- Phone Frame Mockup -->
+  <g transform="translate(225, 20)">
+    <rect x="0" y="0" width="150" height="270" rx="20" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+    <!-- Phone Screen -->
+    <rect x="6" y="10" width="138" height="250" rx="14" fill="#0f172a"/>
+    <!-- Notch / Header Bar -->
+    <rect x="45" y="14" width="60" height="4" rx="2" fill="#475569"/>
+    <!-- App Bar -->
+    <rect x="14" y="26" width="122" height="22" rx="4" fill="url(#flutterBlue)"/>
+    <text x="75" y="41" text-anchor="middle" fill="#ffffff" font-family="'Inter', sans-serif" font-size="9" font-weight="700">Catalog Store</text>
+
+    <!-- Catalog Grid Items -->
+    <rect x="14" y="56" width="58" height="60" rx="6" fill="#1e293b" stroke="#334155"/>
+    <circle cx="43" cy="78" r="14" fill="#0284c7" opacity="0.6"/>
+    <rect x="22" y="100" width="42" height="6" rx="3" fill="#64748b"/>
+
+    <rect x="78" y="56" width="58" height="60" rx="6" fill="#1e293b" stroke="#334155"/>
+    <circle cx="107" cy="78" r="14" fill="#38bdf8" opacity="0.6"/>
+    <rect x="86" y="100" width="42" height="6" rx="3" fill="#64748b"/>
+
+    <rect x="14" y="124" width="58" height="60" rx="6" fill="#1e293b" stroke="#334155"/>
+    <circle cx="43" cy="146" r="14" fill="#a855f7" opacity="0.6"/>
+    <rect x="22" y="168" width="42" height="6" rx="3" fill="#64748b"/>
+
+    <rect x="78" y="124" width="58" height="60" rx="6" fill="#1e293b" stroke="#334155"/>
+    <circle cx="107" cy="146" r="14" fill="#10b981" opacity="0.6"/>
+    <rect x="86" y="168" width="42" height="6" rx="3" fill="#64748b"/>
+
+    <!-- Bottom Nav -->
+    <rect x="14" y="234" width="122" height="20" rx="4" fill="#1e293b"/>
+    <circle cx="40" cy="244" r="3" fill="#38bdf8"/>
+    <circle cx="75" cy="244" r="3" fill="#64748b"/>
+    <circle cx="110" cy="244" r="3" fill="#64748b"/>
+  </g>
+
+  <!-- Left Floating Badge -->
+  <g transform="translate(45, 100)">
+    <rect width="140" height="48" rx="10" fill="rgba(15, 23, 42, 0.9)" stroke="#38bdf8" stroke-width="1.2"/>
+    <text x="70" y="22" text-anchor="middle" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11" font-weight="700">FLUTTER &amp; DART</text>
+    <text x="70" y="38" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">Catalog Engine</text>
+  </g>
+
+  <!-- Right Floating Badge -->
+  <g transform="translate(415, 150)">
+    <rect width="140" height="48" rx="10" fill="rgba(15, 23, 42, 0.9)" stroke="#0284c7" stroke-width="1.2"/>
+    <text x="70" y="22" text-anchor="middle" fill="#93c5fd" font-family="'Inter', sans-serif" font-size="11" font-weight="700">MODULAR UI</text>
+    <text x="70" y="38" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">Cross-Platform</text>
+  </g>
+
+  <!-- Bottom Tag -->
+  <rect x="175" y="295" width="250" height="32" rx="16" fill="rgba(15, 23, 42, 0.9)" stroke="#38bdf8" stroke-width="1"/>
+  <text x="300" y="315" text-anchor="middle" fill="#e0f2fe" font-family="'Inter', sans-serif" font-size="11" font-weight="600">
+    FLUTTER CATALOG APP PREVIEW
+  </text>
+</svg>

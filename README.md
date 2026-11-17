@@ -18,11 +18,12 @@ Explore the live portfolio at:
 
 ## 🛠️ Tech Stack & Engineering Highlights
 
-- **Languages:** C, C++ (OOP, STL, pointers), Python, SQL (MySQL), JavaScript (ES6+).
+- **Languages & Frameworks:** Flutter, Dart, Python, C, C++ (OOP, STL, pointers), SQL (MySQL), JavaScript (ES6+).
+- **Mobile Development:** Cross-platform mobile architecture with Flutter, reactive state handling, widget composition, mobile UI/UX.
 - **Core Computer Science:** Data Structures & Algorithms, Object-Oriented Design (OOP), Database Management Systems (DBMS), Computer Networks.
 - **Backend & Databases:** MySQL (relational schema design, normalization, query optimization), MongoDB (NoSQL), automated Python ETL pipelines.
-- **Frontend & UI:** Semantic HTML5, modern vanilla CSS3 (CSS Grid, Flexbox, Glassmorphism, dynamic glow effects), responsive web design.
-- **Developer Tools & DevOps:** Git, GitHub (version control, branch workflows, CI/CD), Linux/Unix CLI (Zsh/Bash), VS Code, Jupyter Notebooks.
+- **Developer Tools & Environments:** Git, GitHub, VS Code, Android Studio, Jupyter Notebook, Linux/Unix CLI (Zsh/Bash), Microsoft Excel.
+- **Data & Business Intelligence:** Power BI, Tableau, Pandas, NumPy, statistical data visualization.
 - **Interactive Lab:** Real-time interactive telemetry and data exploration rendered directly with **Chart.js**.
 
 ---
@@ -35,37 +36,43 @@ portfolio/
 ├── css/
 │   └── style.css                # Polished responsive styles & themes
 ├── js/
-│   └── main.js                  # Typing animations, Chart.js lab, theme logic
+│   └── main.js                  # Dynamic typing, constellation background, theme logic
 ├── assets/
 │   ├── Ayush_Rastogi_Resume.pdf # Authentic PDF Resume for 1-click download
-│   ├── profile.jpg              # [Photo Slot] Add your profile photo here
-│   ├── profile-placeholder.svg  # Default modern avatar placeholder
+│   ├── profile.jpg              # Profile photo
+│   ├── profile-placeholder.svg  # Avatar fallback placeholder
 │   └── projects/
-│       ├── pizza-sales.jpg      # [Project 1] Add Pizza Sales screenshot
+│       ├── flutter-catalog.svg  # [Mobile Project 1] Flutter Catalog App mockup
+│       ├── expense-tracker.svg  # [Mobile Project 2] Expense Tracker App mockup
+│       ├── pizza-sales.jpg      # [Analytics Project 3] Pizza Sales screenshot
 │       ├── pizza-sales-placeholder.svg
-│       ├── car-sales.jpg        # [Project 2] Add Car Sales screenshot
+│       ├── car-sales.jpg        # [Analytics Project 4] Car Sales screenshot
 │       └── car-sales-placeholder.svg
 └── README.md                    # Project documentation & setup instructions
 ```
 
-### 🖼️ Adding Your Real Photos:
-All image elements are built with seamless fallbacks:
-- **Profile Picture:** Save your photo as `assets/profile.jpg`. The website will automatically display it.
-- **Project Previews:** Drop your dashboard screenshots as `assets/projects/pizza-sales.jpg` and `assets/projects/car-sales.jpg`.
-- Until you add your images, high-resolution SVG placeholders are displayed automatically.
-
 ---
 
-## 📊 Featured Projects & Systems
+## 📱 Featured Projects & Systems
 
-1. **Pizza Sales Analytics & Intelligence Engine (SQL & Power BI)**
+1. **Flutter Catalog App (Flutter & Dart / Personal Projects)**
+   - Developed a cross-platform catalog mobile application using Flutter and Dart.
+   - Designed modular screen architecture and widget trees for catalog item discovery and category browsing.
+   - Structured clean code architecture separating models, views, and routing logic.
+
+2. **Expense Tracker App (Flutter & Dart / Personal Projects)**
+   - Built a prototype mobile application to record, categorize, and review personal expenses.
+   - Implemented reactive UI screens for seamless transaction entries and dynamic expense updates.
+   - Organised a clean, maintainable codebase adhering to mobile development patterns.
+
+3. **Pizza Sales Analytics & Intelligence Engine (SQL & Power BI)**
    - Extracted and transformed order records using optimized SQL queries and relational modeling.
    - Identified revenue trends, best/worst sellers, and order volume patterns.
    - Designed an interactive multi-tab Power BI dashboard for executive reporting.
 
-2. **Automotive Sales & Market Trend Analysis Engine (Python, SQL & Power BI)**
+4. **Automotive Sales & Market Trend Analysis Engine (Python, SQL & Power BI)**
    - Engineered automated data cleaning and normalization pipelines using Python and Pandas.
-   - Evaluated feature correlations with statistical algorithms and Seaborn heatmaps.
+   - Evaluated feature correlations with statistical algorithms and correlation heatmaps.
    - Built KPI dashboards showing regional sales and vehicle category metrics.
 
 ---

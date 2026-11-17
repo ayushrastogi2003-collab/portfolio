@@ -301,10 +301,10 @@ function initTypingEffect() {
   if (!typedSpan) return;
 
   const words = [
-    'Software Engineer',
-    'C++ & Python Developer',
-    'Full-Stack & Backend Builder',
-    'DSA & Systems Enthusiast'
+    'Entry-Level Software Engineer',
+    'Flutter & Dart Developer',
+    'Python & C++ Programmer',
+    'Backend & Systems Enthusiast'
   ];
   let wordIndex = 0;
   let charIndex = 0;
