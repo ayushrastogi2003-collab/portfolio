@@ -1,11 +1,11 @@
-# Ayush Rastogi — Software Engineer Portfolio
+# Ayush Rastogi — Data Analyst Portfolio
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-brightgreen?logo=github)](https://ayushrastogi2003-collab.github.io/portfolio/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin)](https://linkedin.com)
 [![Portfolio Views](https://komarev.com/ghpvc/?username=ayushrastogi2003-collab&label=Profile%20Views&color=0e75b6&style=flat)](https://github.com/ayushrastogi2003-collab)
 
-> A modern, responsive, high-performance personal portfolio tailored for **Software Engineering**, featuring clean software architectures, C++, Python, Data Structures & Algorithms, full-stack systems, an interactive engineering playground, downloadable resume, and dark/light themes.
+> A modern, responsive, high-performance personal portfolio tailored for **Data Analytics**, featuring interactive case studies (SQL, Power BI, Python), a live Chart.js Data Lab, downloadable resume, and dark/light themes.
 
 ---
 
@@ -16,15 +16,16 @@ Explore the live portfolio at:
 
 ---
 
-## 🛠️ Tech Stack & Engineering Highlights
+## 🛠️ Tech Stack & Highlights
 
-- **Languages & Frameworks:** Flutter, Dart, Python, C, C++ (OOP, STL, pointers), SQL (MySQL), JavaScript (ES6+).
-- **Mobile Development:** Cross-platform mobile architecture with Flutter, reactive state handling, widget composition, mobile UI/UX.
-- **Core Computer Science:** Data Structures & Algorithms, Object-Oriented Design (OOP), Database Management Systems (DBMS), Computer Networks.
-- **Backend & Databases:** MySQL (relational schema design, normalization, query optimization), MongoDB (NoSQL), automated Python ETL pipelines.
-- **Developer Tools & Environments:** Git, GitHub, VS Code, Android Studio, Jupyter Notebook, Linux/Unix CLI (Zsh/Bash), Microsoft Excel.
-- **Data & Business Intelligence:** Power BI, Tableau, Pandas, NumPy, statistical data visualization.
-- **Interactive Lab:** Real-time interactive telemetry and data exploration rendered directly with **Chart.js**.
+- **Frontend & Styling:** Modern semantic HTML5, Vanilla CSS3 (Custom properties, CSS Grid/Flexbox, Glassmorphism accents), FontAwesome 6.
+- **Interactivity:** Vanilla JavaScript (ES6+), Dynamic Typing effect, Theme Switcher (Dark/Light mode with local persistence), ScrollSpy, Filterable Skills Matrix.
+- **Data Visualization Lab:** Live interactive charts rendered in-browser using **Chart.js** for case-study exploration.
+- **Analytics Expertise Highlighted:**
+  - **SQL (MySQL):** Complex joins, window functions, CTEs, aggregation pipelines.
+  - **Power BI & DAX:** Interactive dashboards, data modeling, KPI tracking.
+  - **Python Data Stack:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn.
+  - **Excel:** Advanced functions, pivot tables, data cleaning.
 
 ---
 
@@ -36,43 +37,37 @@ portfolio/
 ├── css/
 │   └── style.css                # Polished responsive styles & themes
 ├── js/
-│   └── main.js                  # Dynamic typing, constellation background, theme logic
+│   └── main.js                  # Typing animations, Chart.js lab, theme logic
 ├── assets/
 │   ├── Ayush_Rastogi_Resume.pdf # Authentic PDF Resume for 1-click download
-│   ├── profile.jpg              # Profile photo
+│   ├── profile.jpg              # Integrated profile portrait photo
 │   ├── profile-placeholder.svg  # Avatar fallback placeholder
 │   └── projects/
-│       ├── flutter-catalog.svg  # [Mobile Project 1] Flutter Catalog App mockup
-│       ├── expense-tracker.svg  # [Mobile Project 2] Expense Tracker App mockup
-│       ├── pizza-sales.jpg      # [Analytics Project 3] Pizza Sales screenshot
+│       ├── pizza-sales.jpg      # [Project 1] Add Pizza Sales screenshot
 │       ├── pizza-sales-placeholder.svg
-│       ├── car-sales.jpg        # [Analytics Project 4] Car Sales screenshot
+│       ├── car-sales.jpg        # [Project 2] Add Car Sales screenshot
 │       └── car-sales-placeholder.svg
 └── README.md                    # Project documentation & setup instructions
 ```
 
+### 🖼️ Adding Your Real Photos:
+All image elements are built with seamless fallbacks:
+- **Profile Picture:** Save your photo as `assets/profile.jpg`. The website will automatically display it.
+- **Project Previews:** Drop your dashboard screenshots as `assets/projects/pizza-sales.jpg` and `assets/projects/car-sales.jpg`.
+- Until you add your images, high-resolution SVG placeholders are displayed automatically.
+
 ---
 
-## 📱 Featured Projects & Systems
+## 📊 Featured Case Studies
 
-1. **Flutter Catalog App (Flutter & Dart / Personal Projects)**
-   - Developed a cross-platform catalog mobile application using Flutter and Dart.
-   - Designed modular screen architecture and widget trees for catalog item discovery and category browsing.
-   - Structured clean code architecture separating models, views, and routing logic.
-
-2. **Expense Tracker App (Flutter & Dart / Personal Projects)**
-   - Built a prototype mobile application to record, categorize, and review personal expenses.
-   - Implemented reactive UI screens for seamless transaction entries and dynamic expense updates.
-   - Organised a clean, maintainable codebase adhering to mobile development patterns.
-
-3. **Pizza Sales Analytics & Intelligence Engine (SQL & Power BI)**
-   - Extracted and transformed order records using optimized SQL queries and relational modeling.
+1. **Pizza Sales Performance Analysis (SQL & Power BI)**
+   - Extracted and transformed order records using SQL queries.
    - Identified revenue trends, best/worst sellers, and order volume patterns.
    - Designed an interactive multi-tab Power BI dashboard for executive reporting.
 
-4. **Automotive Sales & Market Trend Analysis Engine (Python, SQL & Power BI)**
-   - Engineered automated data cleaning and normalization pipelines using Python and Pandas.
-   - Evaluated feature correlations with statistical algorithms and correlation heatmaps.
+2. **Automotive Sales & Market Trend Analysis (Python, SQL & Power BI)**
+   - Pre-processed and normalized raw vehicle transaction datasets using Pandas.
+   - Evaluated feature correlations with Seaborn heatmaps.
    - Built KPI dashboards showing regional sales and vehicle category metrics.
 
 ---

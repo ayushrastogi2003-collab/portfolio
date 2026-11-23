@@ -1,4 +1,4 @@
-// Main JavaScript for Ayush Rastogi's Software Engineer Portfolio
+// Main JavaScript for Ayush Rastogi's Data Analyst Portfolio
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -301,10 +301,10 @@ function initTypingEffect() {
   if (!typedSpan) return;
 
   const words = [
-    'Entry-Level Software Engineer',
-    'Flutter & Dart Developer',
-    'Python & C++ Programmer',
-    'Backend & Systems Enthusiast'
+    'Data Analyst',
+    'SQL & Power BI Specialist',
+    'Python & EDA Explorer',
+    'Business Insights Builder'
   ];
   let wordIndex = 0;
   let charIndex = 0;
